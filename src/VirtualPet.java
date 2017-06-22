@@ -1,40 +1,44 @@
 
 public class VirtualPet {
 	String name;
-	int hunger = 50;
-	int thirst = 50;
 	int boredom = 50;
+	int healthNeed = 50;
+	int happiness = 50;
+	String species;
 	String description;
 
-	public VirtualPet(String nameParam, String descriptionParam, int hungerParam, int thirstParam, int boredomParam) {
+	public VirtualPet(String nameParam, String descriptionParam, String speciesParam, int boredomParam, int happinessParam, int healthNeedParam) {
 		name = nameParam;
 		description = descriptionParam;
-		hunger = hungerParam;
-		thirst = thirstParam;
 		boredom = boredomParam;
+		happiness = happinessParam;
+		species = speciesParam;
+		healthNeed = healthNeedParam;
 	}
 
 	@Override
 	public String toString() {
-		return "\n" + name + "\t Description" + description + "\t Hunger:" + hunger + "\t Thirst: " + thirst + "\t Boredom:" + boredom;
-	}
-
-	void feed() {
-		hunger = hunger - 10;
-	}
-
-	void water() {
-		thirst = thirst - 10;
-	}
-
-	void play() {
-		boredom = boredom - 10;
+		return "\n" + name + "\t species" + species + "\t Description" + description + "\t Boredom:" + boredom + "\t Happiness Level" + happiness + "\t Health Level";
 	}
 
 	public void tick() {
-		hunger = hunger + 5;
-		thirst = thirst + 5;
 		boredom = boredom + 5;
+
+	}
+
+	public void feed() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void water() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void play() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

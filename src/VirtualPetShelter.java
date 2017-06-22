@@ -6,7 +6,7 @@ public class VirtualPetShelter {
 
 	Map<String, VirtualPet> allPets = new HashMap<String, VirtualPet>();
 
-	public VirtualPet getPet(VirtualPet pet) {
+	public VirtualPet getPet(String pet) {
 		return allPets.get(pet);
 	}
 
@@ -30,8 +30,8 @@ public class VirtualPetShelter {
 		}
 	}
 
-	public void playWith(String selectedPet) {
-		selectedPet.play();
+	public void playWith(String name) {
+		getPet(name).play();
 	}
 
 	public void tick() {
